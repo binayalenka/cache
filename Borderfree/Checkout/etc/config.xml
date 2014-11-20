@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<config>
+
+	<modules>
+		<Borderfree_Checkout>
+			<version>1.0.1</version>
+		</Borderfree_Checkout>
+	</modules>
+
+	<global>
+		<helpers>
+			<borderfreecheckout>
+				<class>Borderfree_Checkout_Helper</class>
+			</borderfreecheckout>
+		</helpers>
+		<blocks>
+			<borderfreecheckout>
+				<class>Borderfree_Checkout_Block</class>
+			</borderfreecheckout>
+		</blocks>
+		<models>
+			<borderfreecheckout>
+				<class>Borderfree_Checkout_Model</class>
+			</borderfreecheckout>
+			<sales>
+				<rewrite>
+					<quote_address_total_shipping>Borderfree_Checkout_Model_Shipping
+					</quote_address_total_shipping>
+				</rewrite>
+			</sales>
+		</models>
+		<rewrite>
+			<borderfreecheckout_onepage>
+				<from><![CDATA[#^/checkout/onepage/$#]]></from>
+				<to>/borderfreecheckout/envoy/</to>
+			</borderfreecheckout_onepage>
+		</rewrite>
+	</global>
+	<frontend>
+		<layout>
+			<updates>
+				<borderfreecheckout>
+					<file>borderfreecheckout.xml</file>
+				</borderfreecheckout>
+			</updates>
+		</layout>
+		<routers>
+			<borderfreecheckout>
+				<use>standard</use>
+				<args>
+					<module>Borderfree_Checkout</module>
+					<frontName>borderfreecheckout</frontName>
+				</args>
+			</borderfreecheckout>
+		</routers>
+	</frontend>
+</config>
+

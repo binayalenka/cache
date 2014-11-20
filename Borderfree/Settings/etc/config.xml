@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<config>
+
+	<modules>
+		<Borderfree_Settings>
+			<version>1.0.0</version>
+		</Borderfree_Settings>
+	</modules>
+
+	<global>
+		<helpers>
+			<borderfreesettings>
+				<class>Borderfree_Settings_Helper</class>
+			</borderfreesettings>
+		</helpers>
+		<blocks>
+			<borderfreesettings>
+				<class>Borderfree_Settings_Block</class>
+			</borderfreesettings>
+		</blocks>
+		<models>
+			<borderfreesettings>
+				<class>Borderfree_Settings_Model</class>
+			</borderfreesettings>
+		</models>
+	</global>
+
+	<adminhtml>
+		<acl>
+			<resources>
+				<admin>
+					<children>
+						<system>
+							<children>
+								<config>
+									<children>
+										<borderfree_options>
+											<title>Borderfree Settings</title>
+										</borderfree_options>
+									</children>
+								</config>
+							</children>
+						</system>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+	</adminhtml>
+
+	<default>
+		<borderfree_options>
+			<settings>
+				<enabled>0</enabled>
+				<staging>0</staging>
+				<welcommat>1</welcommat>
+				<welcomematprodurl>https://embassy.fiftyone.com/welcome/welcome.srv</welcomematprodurl>
+				<welcomematstageurl>https://sandbox.fiftyone.com/welcome/welcome.srv</welcomematstageurl>
+			</settings>
+			<catalog>
+				<ftpprod>ftp.fiftyone.com</ftpprod>
+				<ftpstage>stageftp.fiftyone.com</ftpstage>
+				<filerecords>1500</filerecords>
+				<weightunit>LB</weightunit>
+				<lengthunit>IN</lengthunit>
+			</catalog>
+			<localization>
+				<staging>https://sandbox.fiftyone.com/embassy/localizationAPI.srv</staging>
+				<production>https://embassy.fiftyone.com/embassy/localizationAPI.srv</production>
+			</localization>
+			<shipping>
+				<state>OH</state>
+				<zip>43137</zip>
+				<min>1</min>
+				<max>12</max>
+				<method>borderfreeshipping_Borderfree</method>
+				<height>700</height>
+				<width>898</width>
+			</shipping>
+			<checkout>
+				<staging>https://sandbox.fiftyone.com/checkout/checkoutAPI-v2.srv</staging>
+				<production>https://services.fiftyone.com/checkout/checkoutAPI-v2.srv</production>
+			</checkout>
+			<order>
+				<staging>https://sandbox.fiftyone.com/ws/PartnerAPI-SOAP1.1?wsdl</staging>
+				<production>https://services.fiftyone.com/ws/PartnerAPI-SOAP1.1?wsdl</production>
+			</order>			
+		</borderfree_options>
+	</default>
+</config>
+

@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<config>
+
+	<modules>
+		<Borderfree_Catalog>
+			<version>1.0.25</version>
+		</Borderfree_Catalog>
+	</modules>
+
+	<global>
+		<helpers>
+			<borderfreecatalog>
+				<class>Borderfree_Catalog_Helper</class>
+			</borderfreecatalog>
+		</helpers>
+
+		<models>
+			<borderfreecatalog>
+				<class>Borderfree_Catalog_Model</class>
+				<resourceModel>borderfreecatalog_mysql4</resourceModel>
+			</borderfreecatalog>
+			<borderfreecatalog_mysql4>
+				<class>Borderfree_Catalog_Model_Mysql4</class>
+				<entities>
+					<log>
+						<table>borderfree_catalog_export_log</table>
+					</log>
+					<stores>
+						<table>borderfree_catalog_export_stores</table>
+					</stores>
+					<products>
+						<table>borderfree_catalog_export_products</table>
+					</products>
+				</entities>
+			</borderfreecatalog_mysql4>
+		</models>
+
+		<resources>
+			<borderfreecatalog_write>
+				<connection>
+					<use>core_write</use>
+				</connection>
+			</borderfreecatalog_write>
+			<borderfreecatalog_read>
+				<connection>
+					<use>core_read</use>
+				</connection>
+			</borderfreecatalog_read>
+			<borderfreecatalog_setup>
+				<setup>
+					<module>Borderfree_Catalog</module>
+					<class>Mage_Catalog_Model_Resource_Eav_Mysql4_Setup</class>
+				</setup>
+				<connection>
+					<use>core_setup</use>
+				</connection>
+			</borderfreecatalog_setup>
+		</resources>
+	</global>
+</config>
+

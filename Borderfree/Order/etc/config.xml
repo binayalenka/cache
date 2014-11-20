@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<config>
+
+	<modules>
+		<Borderfree_Order>
+			<version>1.0.0</version>
+		</Borderfree_Order>
+	</modules>
+
+	<global>
+		<helpers>
+			<borderfreeorder>
+				<class>Borderfree_Order_Helper</class>
+			</borderfreeorder>
+		</helpers>
+
+		<models>
+			<borderfreeorder>
+				<class>Borderfree_Order_Model</class>
+				<resourceModel>borderfreeorder_mysql4</resourceModel>
+			</borderfreeorder>
+			<borderfreeorder_mysql4>
+				<class>Borderfree_Order_Model_Mysql4</class>
+			</borderfreeorder_mysql4>
+
+            <sales>
+                <rewrite>
+                    <order_shipment_track>Borderfree_Order_Model_Track</order_shipment_track>
+                </rewrite>
+            </sales>
+
+	        <enterprise_cataloginventory>
+				<rewrite>
+					<index_observer>Borderfree_Order_Model_Observer</index_observer>
+				</rewrite>
+		</enterprise_cataloginventory>
+
+		<cataloginventory>
+                        <rewrite>
+                            <observer>Borderfree_Order_Model_Observer</observer>
+                        </rewrite>
+                </cataloginventory>
+
+		</models>
+
+		<resources>
+			<borderfreeorder_write>
+				<connection>
+					<use>core_write</use>
+				</connection>
+			</borderfreeorder_write>
+			<borderfreeorder_read>
+				<connection>
+					<use>core_read</use>
+				</connection>
+			</borderfreeorder_read>
+			<borderfreeorder_setup>
+				<setup>
+					<module>Borderfree_Order</module>
+					<class>Mage_Catalog_Model_Resource_Eav_Mysql4_Setup</class>
+				</setup>
+				<connection>
+					<use>core_setup</use>
+				</connection>
+			</borderfreeorder_setup>
+		</resources>
+
+		<fieldsets>
+			<sales_convert_quote>
+				<borderfree_order_id>
+					<to_order>*</to_order>
+				</borderfree_order_id>
+			</sales_convert_quote>
+		</fieldsets>
+
+	</global>
+	
+</config>
+

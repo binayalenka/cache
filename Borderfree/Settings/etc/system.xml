@@ -1,0 +1,450 @@
+<config>
+    <tabs>
+        <borderfree translate="label" module="borderfreesettings">
+            <label>Borderfree</label>
+            <sort_order>99999</sort_order>
+        </borderfree>
+    </tabs> 
+    <sections>
+        <borderfree_options translate="label" module="borderfreesettings">
+            <label>Settings</label>
+            <tab>borderfree</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>                    
+            <groups>
+                <settings translate="label">
+                    <label>General Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>0</show_in_store>                
+				    <fields>
+				        <enabled>
+				            <label>Borderfree Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+				            <sort_order>1</sort_order>
+				            <show_in_default>1</show_in_default>
+				            <show_in_website>1</show_in_website>
+				            <show_in_store>0</show_in_store>                    
+				        </enabled>
+				        <staging>
+				            <label>Staging Mode Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+				            <sort_order>2</sort_order>
+				            <show_in_default>1</show_in_default>
+				            <show_in_website>1</show_in_website>
+				            <show_in_store>0</show_in_store>                    
+				        </staging>
+				        <merchantid>
+				            <label>Borderfree Merchant ID</label>
+				            <frontend_type>text</frontend_type>
+				            <sort_order>3</sort_order>
+				            <show_in_default>1</show_in_default>
+				            <show_in_website>1</show_in_website>
+				            <show_in_store>0</show_in_store>                    
+				        </merchantid>
+				        <apiuser>
+				            <label>Borderfree API User ID</label>
+				            <frontend_type>text</frontend_type>
+				            <sort_order>4</sort_order>
+				            <show_in_default>1</show_in_default>
+				            <show_in_website>1</show_in_website>
+				            <show_in_store>0</show_in_store>                    
+				        </apiuser>
+				        <apipassword>
+				            <label>Borderfree API Password</label>
+				            <frontend_type>password</frontend_type>
+				            <backend_model>adminhtml/system_config_backend_encrypted</backend_model>
+				            <sort_order>5</sort_order>
+				            <show_in_default>1</show_in_default>
+				            <show_in_website>1</show_in_website>
+				            <show_in_store>0</show_in_store>                    
+				        </apipassword>
+				        <erroremail>
+				            <label>Error Email Address</label>
+				            <frontend_type>text</frontend_type>
+				            <sort_order>6</sort_order>
+				            <show_in_default>1</show_in_default>
+				            <show_in_website>1</show_in_website>
+				            <show_in_store>0</show_in_store>                    
+				        </erroremail>
+				        <welcomemat>
+				            <label>Display Welcome Mat</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+				            <sort_order>7</sort_order>
+				            <show_in_default>1</show_in_default>
+				            <show_in_website>1</show_in_website>
+				            <show_in_store>0</show_in_store>                    
+				        </welcomemat>
+				        <welcomematprodurl>
+				            <label>Welcome Mat Production URL</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>Default URL: https://embassy.fiftyone.com/welcome/welcome.srv</comment>
+				            <sort_order>7</sort_order>
+				            <show_in_default>1</show_in_default>
+				            <show_in_website>1</show_in_website>
+				            <show_in_store>0</show_in_store>                    
+				        </welcomematprodurl>
+				        <welcomematstageurl>
+				            <label>Welcome Mat Staging URL</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>Default URL: https://sandbox.fiftyone.com/welcome/welcome.srv</comment>
+				            <sort_order>7</sort_order>
+				            <show_in_default>1</show_in_default>
+				            <show_in_website>1</show_in_website>
+				            <show_in_store>0</show_in_store>                    
+				        </welcomematstageurl>
+				        <akamai>
+				            <label>Enable Akamai Cache Key Cookie</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+				            <sort_order>8</sort_order>
+				            <show_in_default>1</show_in_default>
+				            <show_in_website>1</show_in_website>
+				            <show_in_store>0</show_in_store>                    
+				        </akamai>
+				        <testip>
+				            <label>Test IP Address</label>
+				            <frontend_type>text</frontend_type>
+				            <comment>IP Address for testing site internationalzation</comment>
+				            <sort_order>9</sort_order>
+				            <show_in_default>1</show_in_default>
+				            <show_in_website>1</show_in_website>
+				            <show_in_store>0</show_in_store>                    
+				        </testip>
+				        <testcountry>
+				            <label>IP Country</label>
+				            <frontend_type>text</frontend_type>
+				            <comment>Mock country for test IP Address</comment>
+				            <sort_order>10</sort_order>
+				            <show_in_default>1</show_in_default>
+				            <show_in_website>1</show_in_website>
+				            <show_in_store>0</show_in_store>                    
+				        </testcountry>
+				    </fields>                   
+                </settings>
+                <catalog translate="label">
+                    <label>Catalog Export Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>                
+				    <fields>
+				        <ftpprod>
+				            <label>Production FTP Host Name</label>
+				            <frontend_type>text</frontend_type>
+				            <sort_order>1</sort_order>
+				            <show_in_default>1</show_in_default>
+				            <show_in_website>0</show_in_website>
+				            <show_in_store>0</show_in_store>                    
+				        </ftpprod>
+				        <ftpstage>
+				            <label>Staging FTP Host Name</label>
+				            <frontend_type>text</frontend_type>
+				            <sort_order>1</sort_order>
+				            <show_in_default>1</show_in_default>
+				            <show_in_website>0</show_in_website>
+				            <show_in_store>0</show_in_store>                    
+				        </ftpstage>
+				        <ftpuser>
+				            <label>FTP User Name</label>
+				            <frontend_type>text</frontend_type>
+				            <sort_order>2</sort_order>
+				            <show_in_default>1</show_in_default>
+				            <show_in_website>0</show_in_website>
+				            <show_in_store>0</show_in_store>                    
+				        </ftpuser>
+				        <ftppassword>
+				            <label>FTP Password</label>
+				            <frontend_type>password</frontend_type>
+				            <backend_model>adminhtml/system_config_backend_encrypted</backend_model>
+				            <sort_order>3</sort_order>
+				            <show_in_default>1</show_in_default>
+				            <show_in_website>0</show_in_website>
+				            <show_in_store>0</show_in_store>                    
+				        </ftppassword>
+				        <filerecords>
+				            <label>Records per file</label>
+				            <frontend_type>text</frontend_type>
+				            <sort_order>4</sort_order>
+				            <show_in_default>1</show_in_default>
+				            <show_in_website>0</show_in_website>
+				            <show_in_store>0</show_in_store>                    
+				        </filerecords>
+				        <weightunit>
+				            <label>Weight Unit of Measure</label>
+				            <frontend_type>select</frontend_type>
+				            <source_model>borderfreesettings/weightunit</source_model>
+				            <sort_order>5</sort_order>
+				            <show_in_default>1</show_in_default>
+				            <show_in_website>0</show_in_website>
+				            <show_in_store>0</show_in_store>                    
+				        </weightunit>
+   				        <lengthunit>
+				            <label>Length Unit of Measure</label>
+				            <frontend_type>select</frontend_type>
+				            <source_model>borderfreesettings/lengthunit</source_model>
+				            <sort_order>6</sort_order>
+				            <show_in_default>1</show_in_default>
+				            <show_in_website>0</show_in_website>
+				            <show_in_store>0</show_in_store>                    
+				        </lengthunit>
+				        <truncate>
+				            <label>Truncate data</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+				            <sort_order>7</sort_order>
+				            <show_in_default>1</show_in_default>
+				            <show_in_website>1</show_in_website>
+				            <show_in_store>0</show_in_store>                    
+				        </truncate>
+				    </fields>                   
+                </catalog>
+                <localization translate="label">
+                    <label>Localization Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>3</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>                
+				    <fields>
+				        <production>
+				            <label>Production Endpoint</label>
+				            <frontend_type>text</frontend_type>
+				            <sort_order>1</sort_order>
+				            <show_in_default>1</show_in_default>
+				            <show_in_website>0</show_in_website>
+				            <show_in_store>0</show_in_store>                    
+				        </production>
+				        <staging>
+				            <label>Staging Endpoint</label>
+				            <frontend_type>text</frontend_type>
+				            <sort_order>2</sort_order>
+				            <show_in_default>1</show_in_default>
+				            <show_in_website>0</show_in_website>
+				            <show_in_store>0</show_in_store>                    
+				        </staging>
+				    </fields>                   
+                </localization>
+                <shipping translate="label">
+                    <label>Shipping Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>4</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>0</show_in_store>                
+				    <fields>
+   				        <min>
+				            <label>Domestic Leg Minimum Delivery Days</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>Minimum number of days to deliver shipment to the Borderfree Domestic Hub (0-12)</comment>
+				            <sort_order>1</sort_order>
+				            <show_in_default>1</show_in_default>
+				            <show_in_website>1</show_in_website>
+				            <show_in_store>0</show_in_store>
+				            <backend_model>borderfreesettings/days</backend_model>                    
+				        </min>			    
+   				        <max>
+				            <label>Domestic Leg Maximum Delivery Days</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>Maximum number of days to deliver shipment to the Borderfree Domestic Hub (0-12)</comment>
+				            <sort_order>2</sort_order>
+				            <show_in_default>1</show_in_default>
+				            <show_in_website>1</show_in_website>
+				            <show_in_store>0</show_in_store>                    
+				            <backend_model>borderfreesettings/days</backend_model>                    
+				        </max>			    
+                        <method translate="label">
+                            <label>Domestic Leg Shipping Method</label>
+                            <frontend_type>select</frontend_type>
+                            <frontend_model>borderfreesettings/adminhtml_shipping_merchant</frontend_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </method>
+   				        <carrier>
+				            <label>Domestic Leg Shipping Carrier Name</label>
+                            <frontend_type>text</frontend_type>
+				            <sort_order>4</sort_order>
+				            <show_in_default>1</show_in_default>
+				            <show_in_website>1</show_in_website>
+				            <show_in_store>1</show_in_store>                    
+				        </carrier>			    
+   				        <service>
+				            <label>Domestic Leg Shipping Carrier Service</label>
+                            <frontend_type>text</frontend_type>
+				            <sort_order>5</sort_order>
+				            <show_in_default>1</show_in_default>
+				            <show_in_website>1</show_in_website>
+				            <show_in_store>1</show_in_store>                    
+				        </service>			    
+   				        <url>
+				            <label>Domestic Leg Shipping Tracking URL</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>Enter the tracking URL. Put "##" where the tracking number shoud go.  Example: http://wwwapps.ups.com/WebTracking/track?track=yes&amp;trackNums=##</comment>
+				            <sort_order>6</sort_order>
+				            <show_in_default>1</show_in_default>
+				            <show_in_website>1</show_in_website>
+				            <show_in_store>0</show_in_store>                    
+				        </url>
+				        <height>
+				            <label>International Parcel Tracking Page height</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>The height of the International Parcel Tracking Page</comment>
+				            <sort_order>7</sort_order>
+				            <show_in_default>1</show_in_default>
+				            <show_in_website>1</show_in_website>
+				            <show_in_store>0</show_in_store>                    
+				        </height>			    
+				        <width>
+				            <label>International Parcel Tracking Page width</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>The width of the International Parcel Tracking Page</comment>
+				            <sort_order>8</sort_order>
+				            <show_in_default>1</show_in_default>
+				            <show_in_website>1</show_in_website>
+				            <show_in_store>0</show_in_store>                    
+				        </width>			    
+   				        <handling>
+				            <label>Domestic Leg Extra Handling</label>
+                            <frontend_type>text</frontend_type>
+				            <sort_order>9</sort_order>
+				            <show_in_default>1</show_in_default>
+				            <show_in_website>1</show_in_website>
+				            <show_in_store>0</show_in_store>                    
+				            <backend_model>borderfreesettings/handling</backend_model>                    
+				        </handling>			    
+   				        <insurance>
+				            <label>Domestic Leg Insurance Price</label>
+                            <frontend_type>text</frontend_type>
+				            <sort_order>10</sort_order>
+				            <show_in_default>1</show_in_default>
+				            <show_in_website>1</show_in_website>
+				            <show_in_store>0</show_in_store>                    
+				            <backend_model>borderfreesettings/insurance</backend_model>                    
+				        </insurance>			    
+   				        <state>
+				            <label>Domestic Leg Ship-to State</label>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>borderfreesettings/adminhtml_shipping_state</frontend_model>
+                            <comment>If you are not using flat rate shipping enter the state of the Borderfree Shipping hub.</comment>
+				            <sort_order>11</sort_order>
+				            <show_in_default>1</show_in_default>
+				            <show_in_website>1</show_in_website>
+				            <show_in_store>0</show_in_store>                    
+				        </state>			    
+   				        <zip>
+				            <label>Domestic Leg Ship-to Zipcode</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>If you are not using flat rate shipping enter the zipcode of the Borderfree Shipping hub.</comment>
+				            <sort_order>12</sort_order>
+				            <show_in_default>1</show_in_default>
+				            <show_in_website>1</show_in_website>
+				            <show_in_store>0</show_in_store>                    
+				            <backend_model>borderfreesettings/zip</backend_model>                    
+				        </zip>			    
+				    </fields>                   
+                </shipping>
+                <checkout translate="label">
+                    <label>Checkout Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>5</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>                
+				    <fields>
+				        <production>
+				            <label>Production Endpoint</label>
+				            <frontend_type>text</frontend_type>
+				            <sort_order>1</sort_order>
+				            <show_in_default>1</show_in_default>
+				            <show_in_website>0</show_in_website>
+				            <show_in_store>0</show_in_store>                    
+				        </production>
+				        <staging>
+				            <label>Staging Endpoint</label>
+				            <frontend_type>text</frontend_type>
+				            <sort_order>2</sort_order>
+				            <show_in_default>1</show_in_default>
+				            <show_in_website>0</show_in_website>
+				            <show_in_store>0</show_in_store>                    
+				        </staging>
+				        <paypal>
+				            <label>PayPal Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+				            <sort_order>3</sort_order>
+				            <show_in_default>1</show_in_default>
+				            <show_in_website>1</show_in_website>
+				            <show_in_store>0</show_in_store>                    
+				        </paypal>
+				        <logo>
+				            <label>Paypal Header Logo URL</label>
+				            <frontend_type>text</frontend_type>
+				            <sort_order>4</sort_order>
+				            <show_in_default>1</show_in_default>
+				            <show_in_website>1</show_in_website>
+				            <show_in_store>1</show_in_store>                    
+				        </logo>
+				    </fields>                   
+                </checkout>
+                <order translate="label">
+                    <label>Order Import Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>6</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>                
+				    <fields>
+                        <method translate="label">
+                            <label>Borderfree Payment Method</label>
+                            <comment>
+                        	Select the payment method used to process Borderfree purchase orders.
+                        	If the selected payment method does not support partial invoicing, the entire order amount will be captured as soon as first item is shipped.
+                            </comment>
+                            <frontend_type>select</frontend_type>
+                            <frontend_model>borderfreesettings/adminhtml_payment</frontend_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </method>
+				        <production>
+				            <label>Production Endpoint</label>
+				            <frontend_type>text</frontend_type>
+				            <sort_order>2</sort_order>
+				            <show_in_default>1</show_in_default>
+				            <show_in_website>0</show_in_website>
+				            <show_in_store>0</show_in_store>                    
+				        </production>
+				        <staging>
+				            <label>Staging Endpoint</label>
+				            <frontend_type>text</frontend_type>
+				            <sort_order>3</sort_order>
+				            <show_in_default>1</show_in_default>
+				            <show_in_website>0</show_in_website>
+				            <show_in_store>0</show_in_store>                    
+				        </staging>
+				        <pgp>
+				            <label>PGP Key</label>
+				            <frontend_type>textarea</frontend_type>
+				            <sort_order>4</sort_order>
+				            <show_in_default>1</show_in_default>
+				            <show_in_website>1</show_in_website>
+				            <show_in_store>0</show_in_store>                    
+				        </pgp>
+				    </fields>                   
+                </order>
+            </groups>
+        </borderfree_options>
+    </sections>     
+</config>
