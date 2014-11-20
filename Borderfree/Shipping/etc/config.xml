@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Borderfree_Shipping>
+			<version>1.0.0</version>
+			<depends>
+				<Mage_Shipping />
+			</depends>
+		</Borderfree_Shipping>
+	</modules>
+
+	<global>
+		<models>
+			<borderfreeshipping>
+				<class>Borderfree_Shipping_Model</class>
+			</borderfreeshipping>
+		</models>
+		<helpers>
+			<borderfreeshipping>
+				<class>Borderfree_Shipping_Helper</class>
+			</borderfreeshipping>
+		</helpers>
+	</global>
+
+	<frontend>
+
+		<layout>
+			<updates>
+				<borderfreeshipping>
+					<file>borderfreeshipping.xml</file>
+				</borderfreeshipping>
+			</updates>
+		</layout>
+
+		<routers>
+			<borderfreeshipping>
+				<use>standard</use>
+				<args>
+					<module>Borderfree_Shipping</module>
+					<frontName>borderfreeshipping</frontName>
+				</args>
+			</borderfreeshipping>
+		</routers>
+		
+	</frontend>
+	
+	<default>
+		<carriers>
+			<borderfreeshipping>
+				<model>borderfreeshipping/shipping</model>
+				<title>Borderfree Shipping</title>
+				<active>1</active>
+				<sort_order>1</sort_order>
+			</borderfreeshipping>
+		</carriers>
+	</default>
+</config>
+

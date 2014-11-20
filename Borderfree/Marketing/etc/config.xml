@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Borderfree_Marketing>
+			<version>1.0.0</version>
+		</Borderfree_Marketing>
+	</modules>
+
+	<global>
+	
+		<helpers>
+			<borderfreemarketing>
+				<class>Borderfree_Marketing_Helper</class>
+			</borderfreemarketing>
+		</helpers>
+
+		<models>
+			<borderfreemarketing>
+				<class>Borderfree_Marketing_Model</class>
+				<resourceModel>borderfreemarketing_mysql4</resourceModel>
+			</borderfreemarketing>
+			<borderfreemarketing_mysql4>
+				<class>Borderfree_Marketing_Model_Mysql4</class>
+				<entities>
+					<record>
+						<table>borderfree_marketing</table>
+					</record>
+				</entities>
+			</borderfreemarketing_mysql4>
+		</models>
+
+		<resources>
+			<borderfreemarketing_write>
+				<connection>
+					<use>core_write</use>
+				</connection>
+			</borderfreemarketing_write>
+			<borderfreemarketing_read>
+				<connection>
+					<use>core_read</use>
+				</connection>
+			</borderfreemarketing_read>
+			<borderfreemarketing_setup>
+				<setup>
+					<module>Borderfree_Marketing</module>
+					<class>Mage_Catalog_Model_Resource_Eav_Mysql4_Setup</class>
+				</setup>
+				<connection>
+					<use>core_setup</use>
+				</connection>
+			</borderfreemarketing_setup>
+		</resources>
+	</global>
+
+</config>
+

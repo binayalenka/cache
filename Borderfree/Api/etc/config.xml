@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Borderfree_Api>
+			<version>1.0.1</version>
+		</Borderfree_Api>
+	</modules>
+
+	<global>
+		<helpers>
+			<borderfreeapi>
+				<class>Borderfree_Api_Helper</class>
+			</borderfreeapi>
+		</helpers>
+		<models>
+			<borderfreeapi>
+				<class>Borderfree_Api_Model</class>
+			</borderfreeapi>
+		</models>
+	</global>
+</config>
+
